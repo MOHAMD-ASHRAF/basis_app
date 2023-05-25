@@ -6,6 +6,7 @@ import 'package:basis_app/presentation/widget/defult_buttom.dart';
 import 'package:basis_app/presentation/widget/text.dart';
 import 'package:flutter/material.dart';
 
+import '../widget/list_recently_view.dart';
 
 class DetailsProductPage extends StatelessWidget {
   const DetailsProductPage({Key? key}) : super(key: key);
@@ -34,38 +35,75 @@ class DetailsProductPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomImage(
-                    paddingFromLeft: 0,
-                    paddingFromRight: 0,
+                      paddingFromLeft: 0,
+                      paddingFromRight: 0,
                       paddingFromTop: 0,
                       height: 200,
                       width: MediaQuery.of(context).size.width,
                       image:
                           'https://img.freepik.com/free-photo/vintage-furniture_74190-346.jpg?size=626&ext=jpg&uid=R75041609&ga=GA1.2.1417712406.1684331786&semt=ais'),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Row(
-                  children: const [
-                    Text1(text: 'Lorem Ipsum',),
-                    Spacer(),
-                    Text1(text: '\$ 30',color: kSecondaryColor,),
-                  ],
+                    children: const [
+                      Text1(
+                        text: 'Lorem Ipsum',
+                      ),
+                      Spacer(),
+                      Text1(
+                        text: '\$ 30',
+                        color: kSecondaryColor,
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 20,),
-                  const Text2(text: 'lorem ipsum dolor sit amen constructor  ',),
-                  const SizedBox(height: 20,),
-                  const Text2(text: 'Rating',),
-                  const SizedBox(height: 20,),
-                  const Text1(text: 'Color',),
-                  const SizedBox(height: 20,),
-                  const Text1(text: 'Quantity',),
-                  const SizedBox(height: 30,),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text2(
+                    text: 'lorem ipsum dolor sit amen constructor  ',
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text2(
+                    text: 'Rating',
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text1(
+                    text: 'Color',
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text1(
+                    text: 'Quantity',
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
                   const Center(
-                    child: DefaultButton(width: 160, text: 'Add To Cart',color: kSecondaryColor,),
+                    child: DefaultButton(
+                      width: 160,
+                      text: 'Add To Cart',
+                      color: kSecondaryColor,
+                    ),
                   ),
-                  const SizedBox(height: 30,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                 ],
               ),
             ),
-            Expanded(child: Container(color: Colors.black54,width: double.infinity , child: const Text('jjjjj'),)),
+           Expanded(
+             child: Column(
+               children: [
+                 ListRecentlyView(),
+               ],
+             ),
+           )
           ],
         ));
   }

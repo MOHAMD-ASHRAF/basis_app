@@ -1,6 +1,7 @@
 import 'package:basis_app/core/color_const.dart';
+import 'package:basis_app/presentation/pages/MyCartPage.dart';
 
-import 'package:basis_app/presentation/pages/home_page.dart';
+
 
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Almarai',
         primaryColor: kPrimaryColor,
       ),
-      home:  const HomePage(),
+      home:  const MyCartPage(),
     );
   }
 }
