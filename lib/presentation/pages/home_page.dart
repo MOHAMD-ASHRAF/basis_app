@@ -1,10 +1,10 @@
 import 'package:basis_app/core/color_const.dart';
+import 'package:basis_app/presentation/widget/TapBarView.dart';
 import 'package:basis_app/presentation/widget/banner_image.dart';
 
 import 'package:basis_app/presentation/widget/list_of_chair.dart';
 import 'package:basis_app/presentation/widget/list_of_sofa.dart';
 import 'package:basis_app/presentation/widget/list_of_table.dart';
-import 'package:basis_app/presentation/widget/tap_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -28,59 +28,36 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            const BannerImage(),
-            DefaultTabController(
-                length: 3,
-                child: Column(
-                  children: [
-                    Material(
-                      child: Container(
-                          height: 50,
-                          color: Colors.transparent,
-                          child: TabBar(
-                            physics: const ClampingScrollPhysics(),
-                            padding: const EdgeInsets.all(10),
-                            unselectedLabelColor: Colors.grey,
-                            indicatorSize: TabBarIndicatorSize.label,
-                            indicator: BoxDecoration(
-                                borderRadius: BorderRadius.circular(30),
-                                color: Colors.amberAccent),
-                            tabs: const [
-                              Tab(
-                                child: TapButton(
-                                  text: 'chair',
-                                ),
-                              ),
-                              Tab(
-                                child: TapButton(
-                                  text: 'Sofa',
-                                ),
-                              ),
-                              Tab(
-                                child: TapButton(
-                                  text: 'Table',
-                                ),
-                              ),
-                            ],
-                          )),
-                    ),
-                    SizedBox(
-                      /// fixs this
-                      height: 500,
-                      child: TabBarView(children: [
-                        ListOfChair(),
-                        ListOfSofa(),
-                        ListOfTable(),
-                      ]),
-                    ),
-                  ],
-                ))
-          ],
-        ),
+      body: Column(
+        children: [
+          const BannerImage(),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  DefaultTabController(
+                      length: 3,
+                      child: Column(
+                        children: [
+                         const TapBarView(),
+                          SizedBox(
+                            height: 450,
+                            child: TabBarView(children: [
+                              ListOfChair(),
+                              ListOfSofa(),
+                              ListOfTable(),
+                            ]),
+                          ),
+                        ],
+                      )),
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
 }
+
+

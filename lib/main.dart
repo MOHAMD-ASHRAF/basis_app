@@ -1,5 +1,7 @@
 import 'package:basis_app/core/color_const.dart';
+
 import 'package:basis_app/presentation/pages/home_page.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {

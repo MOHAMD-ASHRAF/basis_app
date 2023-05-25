@@ -1,5 +1,6 @@
 import 'package:basis_app/presentation/widget/custom_image.dart';
 import 'package:basis_app/presentation/widget/defult_buttom.dart';
+import 'package:basis_app/presentation/widget/text.dart';
 import 'package:flutter/material.dart';
 
 class CustomProduct extends StatelessWidget {
@@ -20,27 +21,19 @@ class CustomProduct extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'lorem ipsum',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
+                const Text1(text: 'lorem ipsum'),
                 const SizedBox(
                   height: 5,
                 ),
-                const Text('lorem ipsum dolor sit ament constractor',
-                    style: TextStyle(fontSize: 16, color: Colors.grey)),
+                const Text2(text: 'lorem ipsum dolor sit ament constractor',),
                 const SizedBox(
                   height: 5,
                 ),
-                const Text('\$20',
-                    style:
-                        TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                const Text1(text: '\$20'),
                 const SizedBox(
                   height: 5,
                 ),
-                const Text('Rating ',
-                    style:
-                        TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                const Text1(text: 'Rating',),
                 const SizedBox(
                   height: 10,
                 ),
