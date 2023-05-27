@@ -1,5 +1,5 @@
 import 'package:basis_app/presentation/widget/custom_image.dart';
-import 'package:basis_app/presentation/widget/defult_buttom.dart';
+import 'package:basis_app/presentation/widget/defult_button.dart';
 import 'package:basis_app/presentation/widget/text.dart';
 import 'package:flutter/material.dart';
 
