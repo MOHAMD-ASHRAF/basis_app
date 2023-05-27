@@ -1,4 +1,5 @@
 import 'package:basis_app/core/color_const.dart';
+import 'package:basis_app/presentation/widget/counter.dart';
 import 'package:basis_app/presentation/widget/custom_image.dart';
 import 'package:basis_app/presentation/widget/text.dart';
 import 'package:flutter/material.dart';
@@ -17,16 +18,16 @@ class ItemMyCart extends StatelessWidget {
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text1(text: 'mohamed ashraf',),
-              const SizedBox(height: 10,),
-              const Text2(text: 'mo ashraf elhegawey'),
-              const SizedBox(height: 10,),
-              const Text1(
+            children: const[
+               Text1(text: 'mohamed ashraf',),
+               SizedBox(height: 10,),
+               Text2(text: 'mo ashraf elhegawey'),
+               SizedBox(height: 10,),
+               Text1(
                 text: '\$ 30',
                 color: kSecondaryColor,
               ),
-
+              Counter(),
             ],
           ),
         )

@@ -1,3 +1,4 @@
+import 'package:basis_app/presentation/pages/detiels_prodeuct_page.dart';
 import 'package:basis_app/presentation/widget/custom_product.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,12 @@ class ListOfChair extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(itemBuilder: (context,index){
-       return  CustomProduct(image: imageList[index],);
+    return ListView.builder(
+      physics: BouncingScrollPhysics(),
+      itemBuilder: (context,index){
+       return  CustomProduct(image: imageList[index],onTap: () {
+         Navigator.pushNamed(context, DetailsProductPage.id);
+       },);
       },
       scrollDirection: Axis.vertical,
       itemCount: imageList.length,

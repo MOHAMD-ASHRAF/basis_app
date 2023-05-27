@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Text1 extends StatelessWidget {
-  const Text1({Key? key, required this.text, this.color,  this.size = 24}) : super(key: key);
+  const Text1({Key? key, required this.text, this.color,  this.size = 20}) : super(key: key);
    final String text;
    final Color? color;
    final double size;

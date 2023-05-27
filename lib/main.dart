@@ -1,5 +1,7 @@
 import 'package:basis_app/core/color_const.dart';
 import 'package:basis_app/presentation/pages/MyCartPage.dart';
+import 'package:basis_app/presentation/pages/detiels_prodeuct_page.dart';
+import 'package:basis_app/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,13 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Almarai',
         primaryColor: kPrimaryColor,
       ),
-      home:  const MyCartPage(),
+      initialRoute: HomePage.id,
+      routes: {
+        HomePage.id : (context)=>  HomePage(),
+        DetailsProductPage.id : (context) => DetailsProductPage(),
+        MyCartPage.id: (context) => MyCartPage(),
+      },
+
     );
   }
 }

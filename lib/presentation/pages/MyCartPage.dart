@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 class MyCartPage extends StatelessWidget {
   const MyCartPage({Key? key}) : super(key: key);
+  static String id = 'MyCartPage';
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,9 @@ class MyCartPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: const Icon(Icons.arrow_back,color: Colors.black,),),
         actions: [
           IconButton(
               onPressed: () {},
@@ -24,7 +28,12 @@ class MyCartPage extends StatelessWidget {
         ],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const Padding(
+            padding: EdgeInsets.all(10),
+            child: Text1(text: 'MyCart',size: 28,color: Colors.black,),
+          ),
           Expanded(
               child: ListView.separated(
                 physics: BouncingScrollPhysics(),
@@ -37,6 +46,7 @@ class MyCartPage extends StatelessWidget {
             itemCount: 10,
             scrollDirection: Axis.vertical,
           )),
+
           Container(
             width: double.infinity,
             height: 180,
