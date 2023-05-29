@@ -1,12 +1,14 @@
+import 'package:basis_app/bloc/product/product_bloc.dart';
 import 'package:basis_app/core/color_const.dart';
 import 'package:basis_app/presentation/widget/TapBarView.dart';
 import 'package:basis_app/presentation/widget/banner_image.dart';
-
 import 'package:basis_app/presentation/widget/list_of_chair.dart';
 import 'package:basis_app/presentation/widget/list_of_sofa.dart';
 import 'package:basis_app/presentation/widget/list_of_table.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -40,7 +42,7 @@ class HomePage extends StatelessWidget {
                       length: 3,
                       child: Column(
                         children: [
-                         const TapBarView(),
+                          const TapBarView(),
                           SizedBox(
                             height: 450,
                             child: TabBarView(children: [

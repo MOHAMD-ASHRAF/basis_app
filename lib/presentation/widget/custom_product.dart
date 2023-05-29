@@ -4,7 +4,6 @@ import 'package:basis_app/presentation/widget/custom_image.dart';
 import 'package:basis_app/presentation/widget/default_button.dart';
 import 'package:basis_app/presentation/widget/text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class CustomProduct extends StatelessWidget {
   CustomProduct({Key? key, required this.image, this.onTap}) : super(key: key);
