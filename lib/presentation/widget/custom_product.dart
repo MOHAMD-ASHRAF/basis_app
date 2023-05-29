@@ -1,7 +1,7 @@
 import 'package:basis_app/presentation/pages/MyCartPage.dart';
 import 'package:basis_app/presentation/widget/Rating.dart';
 import 'package:basis_app/presentation/widget/custom_image.dart';
-import 'package:basis_app/presentation/widget/defult_button.dart';
+import 'package:basis_app/presentation/widget/default_button.dart';
 import 'package:basis_app/presentation/widget/text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -17,6 +17,7 @@ class CustomProduct extends StatelessWidget {
       padding: const EdgeInsets.only(
         left: 20,
         top: 10,
+        bottom: 10
       ),
       child: GestureDetector(
         onTap: onTap,
@@ -33,7 +34,7 @@ class CustomProduct extends StatelessWidget {
                     height: 5,
                   ),
                   const Text2(
-                    text: 'lorem ipsum dolor sit ament constractor',
+                    text: 'lorem ipsum dolor sit ament constractor fdfdfffd',
                   ),
                   const SizedBox(
                     height: 5,

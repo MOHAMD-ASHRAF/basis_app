@@ -1,5 +1,5 @@
 import 'package:basis_app/core/color_const.dart';
-import 'package:basis_app/presentation/widget/defult_button.dart';
+import 'package:basis_app/presentation/widget/default_button.dart';
 import 'package:basis_app/presentation/widget/item_my_cart.dart';
 import 'package:basis_app/presentation/widget/text.dart';
 import 'package:flutter/material.dart';

@@ -3,7 +3,7 @@ import 'package:basis_app/presentation/pages/MyCartPage.dart';
 import 'package:basis_app/presentation/widget/Rating.dart';
 import 'package:basis_app/presentation/widget/counter.dart';
 import 'package:basis_app/presentation/widget/custom_image.dart';
-import 'package:basis_app/presentation/widget/defult_button.dart';
+import 'package:basis_app/presentation/widget/default_button.dart';
 import 'package:basis_app/presentation/widget/text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -47,20 +47,21 @@ class CustomDetailsData extends StatelessWidget {
             height: 20,
           ),
           const Text2(
-            text: 'lorem ipsum dolor sit amen constructor  ',
+            maxLine: 3,
+            text: 'lorem ipsum dolor sit amen constructor lorem ipsum dolor sit amen constructor lorem ipsum dolor sit amen constructor lorem ipsum dolor sit amen constructor ',
           ),
           const SizedBox(
             height: 20,
           ),
           const Rating(),
           const SizedBox(
-            height: 20,
+            height: 16,
           ),
           const Text1(
             text: 'Color',
           ),
           const SizedBox(
-            height: 20,
+            height: 16,
           ),
           Row(
             children: const[
@@ -72,7 +73,7 @@ class CustomDetailsData extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 30,
+            height: 20,
           ),
           Center(
             child: DefaultButton(
