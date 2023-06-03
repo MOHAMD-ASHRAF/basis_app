@@ -11,7 +11,7 @@ class ListOfSofa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       itemBuilder: (context,index){
        return  CustomProduct(image: imageList[index],);
       },

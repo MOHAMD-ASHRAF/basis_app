@@ -1,9 +1,7 @@
-import 'package:basis_app/bloc/product/product_bloc.dart';
-import 'package:basis_app/model/product_model.dart';
+
 import 'package:basis_app/presentation/pages/detiels_prodeuct_page.dart';
 import 'package:basis_app/presentation/widget/custom_product.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ListOfChair extends StatelessWidget {
   ListOfChair({Key? key}) : super(key: key);
@@ -17,7 +15,7 @@ class ListOfChair extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       itemBuilder: (context, index) {
         return CustomProduct(image: imageList[index], onTap: () {
           Navigator.pushNamed(context, DetailsProductPage.id);

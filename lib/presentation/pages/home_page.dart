@@ -1,4 +1,3 @@
-import 'package:basis_app/bloc/product/product_bloc.dart';
 import 'package:basis_app/core/color_const.dart';
 import 'package:basis_app/presentation/widget/TapBarView.dart';
 import 'package:basis_app/presentation/widget/banner_image.dart';

@@ -36,7 +36,7 @@ class MyCartPage extends StatelessWidget {
           ),
           Expanded(
               child: ListView.separated(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                itemBuilder: (context, index) {
                 return const ItemMyCart();
               },

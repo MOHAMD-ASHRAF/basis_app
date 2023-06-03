@@ -32,7 +32,7 @@ class DetailsProductPage extends StatelessWidget {
             const CustomDetailsData(),
            Expanded(
              child: Column(
-               children: [
+               children: const [
                   ListRecentlyView(),
                ],
              ),

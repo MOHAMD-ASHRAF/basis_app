@@ -13,11 +13,7 @@ class CustomProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        left: 20,
-        top: 10,
-        bottom: 10
-      ),
+      padding: const EdgeInsets.only(left: 20, top: 10, bottom: 10),
       child: GestureDetector(
         onTap: onTap,
         child: Row(
@@ -42,7 +38,7 @@ class CustomProduct extends StatelessWidget {
                   const SizedBox(
                     height: 5,
                   ),
-                  Rating(),
+                  const Rating(),
                   const SizedBox(
                     height: 10,
                   ),
@@ -83,4 +79,3 @@ class CustomProduct extends StatelessWidget {
     );
   }
 }
-
