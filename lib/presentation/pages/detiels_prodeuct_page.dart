@@ -27,12 +27,12 @@ class DetailsProductPage extends StatelessWidget {
                 ))
           ],
         ),
-        body: Column(
+        body: const Column(
           children: [
-            const CustomDetailsData(),
+            CustomDetailsData(),
            Expanded(
              child: Column(
-               children: const [
+               children: [
                   ListRecentlyView(),
                ],
              ),

@@ -4,10 +4,10 @@ import 'package:dartz/dartz.dart';
 
 import '../../core/error/failure.dart';
 
-class GetProductsByCategory{
+class GetJeweleryProductsUseCase{
   final BaseProductRepository repository;
-  GetProductsByCategory(this.repository);
+  GetJeweleryProductsUseCase(this.repository);
   Future<Either<Failure,List<Product>>> execute(String category) async{
-     return await repository.geProductsByCategory(category);
+    return await repository.getJeweleryProduct(category);
   }
 }

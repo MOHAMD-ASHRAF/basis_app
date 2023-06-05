@@ -31,8 +31,8 @@ class CustomDetailsData extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Row(
-            children: const [
+          const Row(
+            children: [
               Text1(
                 text: 'Lorem Ipsum',
               ),
@@ -63,8 +63,8 @@ class CustomDetailsData extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          Row(
-            children: const[
+          const Row(
+            children: [
                Text1(
                 text: 'Quantity',
               ),

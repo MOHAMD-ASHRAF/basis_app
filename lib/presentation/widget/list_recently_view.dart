@@ -81,11 +81,11 @@ class ItemImageStack extends StatelessWidget {
                     bottomRight: Radius.circular(20),
                     bottomLeft: Radius.circular(20),
                   )),
-              child: Padding(
-                padding: const EdgeInsets.all(6),
+              child: const Padding(
+                padding: EdgeInsets.all(6),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text1(
                       text: 'loreni psum',
                       color: Colors.white,

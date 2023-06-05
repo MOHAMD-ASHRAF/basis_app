@@ -51,12 +51,12 @@ class MyCartPage extends StatelessWidget {
             width: double.infinity,
             height: 180,
             color: kPrimaryColor,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
               child: Column(
                 children: [
                   Row(
-                    children: const [
+                    children: [
                       Text1(
                         text: 'Total price',
                         color: Colors.white,
@@ -70,10 +70,10 @@ class MyCartPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 50,
                   ),
-                  const Center(
+                  Center(
                     child: DefaultButton(
                       color: kSecondaryColor,
                       width: 150,

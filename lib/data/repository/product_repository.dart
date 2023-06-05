@@ -11,12 +11,22 @@ class ProductRepository extends BaseProductRepository{
 
   ProductRepository(this.baseRemoteDataSource);
   @override
-  Future<Either<Failure,List<Product>>> geProductsByCategory(String category) async{
-      final result =   await baseRemoteDataSource.getProductByCategory(category);
+  Future<Either<Failure,List<Product>>> getElectronicProduct(String category) async{
+      final result =   await baseRemoteDataSource.getElectronicsProducts(category);
       try{
         return Right(result);
       }on ServerException catch(failure){
         return left(ServerFailure(failure.message));
       }
+  }
+
+  @override
+  Future<Either<Failure, List<Product>>> getJeweleryProduct(String category) async {
+    final result =   await baseRemoteDataSource.getJeweleryProducts(category);
+    try{
+      return Right(result);
+    }on ServerException catch(failure){
+      return left(ServerFailure(failure.message));
+    }
   }
 }

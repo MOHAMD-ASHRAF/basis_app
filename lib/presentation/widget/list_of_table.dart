@@ -13,7 +13,7 @@ class ListOfTable extends StatelessWidget {
     return ListView.builder(
       physics: const BouncingScrollPhysics(),
       itemBuilder: (context,index){
-       return  CustomProduct(image: imageList[index],);
+       return  CustomProduct(image: imageList[index], title: '', description: '', price: 5);
       },
       scrollDirection: Axis.vertical,
       itemCount: imageList.length,
