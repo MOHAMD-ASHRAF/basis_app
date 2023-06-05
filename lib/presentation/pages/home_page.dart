@@ -5,7 +5,7 @@ import 'package:basis_app/presentation/widget/TapBarView.dart';
 import 'package:basis_app/presentation/widget/banner_image.dart';
 import 'package:basis_app/presentation/widget/list_of_electronics.dart';
 import 'package:basis_app/presentation/widget/list_of_jewelery.dart';
-import 'package:basis_app/presentation/widget/list_of_table.dart';
+import 'package:basis_app/presentation/widget/list_of_men_clothing.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,7 +18,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => sl<ProductBloc>()..add(GetElectronicsProductsEvent())..add(GetJeweleryProductsEvent()),
+      create: (context) => sl<ProductBloc>()..add(GetElectronicsProductsEvent())..add(GetJeweleryProductsEvent())..add(GetMenClothingEvent()),
+
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: kPrimaryColor,
@@ -49,7 +50,7 @@ class HomePage extends StatelessWidget {
                           child: TabBarView(children: [
                             const ListOfElectronics(),
                             const ListOfJewelery(),
-                            ListOfTable(),
+                            ListOfMenClothing(),
                           ]),
                         ),
                       ],

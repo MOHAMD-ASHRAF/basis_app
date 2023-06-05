@@ -29,4 +29,15 @@ class ProductRepository extends BaseProductRepository{
       return left(ServerFailure(failure.message));
     }
   }
+
+  @override
+  Future<Either<Failure, List<Product>>> getMenClothing(String category) async{
+    final result =   await baseRemoteDataSource.getMenClothingProducts(category);
+    try{
+      return Right(result);
+    }on ServerException catch(failure){
+      return left(ServerFailure(failure.message));
+    }
+  }
+  
 }

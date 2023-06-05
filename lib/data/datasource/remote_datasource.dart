@@ -7,6 +7,7 @@ import 'package:dio/dio.dart';
 abstract class BaseRemoteDataSource {
   Future<List<ProductModel>> getElectronicsProducts(String category);
   Future<List<ProductModel>> getJeweleryProducts(String category);
+  Future<List<ProductModel>> getMenClothingProducts(String category);
 }
 class RemoteDataSource extends BaseRemoteDataSource {
   @override
@@ -24,6 +25,19 @@ class RemoteDataSource extends BaseRemoteDataSource {
 
   @override
   Future<List<ProductModel>> getJeweleryProducts(String category) async{
+    final response =
+        await Dio().get('${AppConstance.getProductByCategory}$category');
+
+    if (response.statusCode == 200) {
+      return List<ProductModel>.from(
+          (response.data as List).map((e) => ProductModel.fromJson(e)));
+    }else{
+      throw ServerException(message: 'something error');
+    }
+  }
+
+  @override
+  Future<List<ProductModel>> getMenClothingProducts(String category)  async{
     final response =
         await Dio().get('${AppConstance.getProductByCategory}$category');
 

@@ -71,7 +71,7 @@ class CustomProduct extends StatelessWidget {
             ),
             Expanded(
                 child: CustomImage(
-                   fit: BoxFit.fitHeight,
+                   fit: BoxFit.scaleDown,
                     circularBottomRight: 0,
                     circularTopRight: 0,
                     paddingFromRight: 0,

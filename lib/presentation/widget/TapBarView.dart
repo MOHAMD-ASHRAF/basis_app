@@ -24,17 +24,17 @@ class TapBarView extends StatelessWidget {
             tabs: const [
               Tab(
                 child: TapButton(
-                  text: 'chair',
+                  text: 'electronic',
                 ),
               ),
               Tab(
                 child: TapButton(
-                  text: 'Sofa',
+                  text: 'jewelery',
                 ),
               ),
               Tab(
                 child: TapButton(
-                  text: 'Table',
+                  text: 'clothing',
                 ),
               ),
             ],
