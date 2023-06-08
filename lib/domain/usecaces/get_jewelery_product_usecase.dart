@@ -1,13 +1,19 @@
+import 'package:basis_app/core/error/failure.dart';
+import 'package:basis_app/core/usecase/base_usecase.dart';
 import 'package:basis_app/domain/entities/product.dart';
+
 import 'package:basis_app/domain/repository/base_product_repository.dart';
 import 'package:dartz/dartz.dart';
 
-import '../../core/error/failure.dart';
 
-class GetJeweleryProductsUseCase{
-  final BaseProductRepository repository;
-  GetJeweleryProductsUseCase(this.repository);
-  Future<Either<Failure,List<Product>>> execute(String category) async{
-    return await repository.getJeweleryProduct(category);
+
+class GetJeweleryProductsUseCase extends BaseUseCase<List<Product>, String>{
+  final BaseProductRepository baseProductRepository;
+  GetJeweleryProductsUseCase(this.baseProductRepository);
+
+  @override
+  Future<Either<Failure, List<Product>>> call(String parameters) async{
+    return await baseProductRepository.getJeweleryProduct(parameters);
   }
+
 }

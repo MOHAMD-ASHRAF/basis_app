@@ -6,13 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ListOfMenClothing extends StatelessWidget {
-   ListOfMenClothing({Key? key}) : super(key: key);
+   const ListOfMenClothing({Key? key}) : super(key: key);
 
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ProductBloc, ProductState>(
+      buildWhen: (previous, current) => previous.menClothingProductsState != current.menClothingProductsState,
       builder: (context, state) {
+        print('build mens');
         switch(state.menClothingProductsState) {
           case RequestState.loading:
             return const Center(child: CircularProgressIndicator());
@@ -26,7 +28,7 @@ class ListOfMenClothing extends StatelessWidget {
                     },
                     title: state.menClothingProducts[index].title,
                     description: state.menClothingProducts[index].description,
-                    price: state.menClothingProducts[index].price);
+                    price: state.menClothingProducts[index].price, rating: 1,);
               },
               scrollDirection: Axis.vertical,
               itemCount: state.menClothingProducts.length,

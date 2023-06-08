@@ -1,7 +1,8 @@
 import 'package:basis_app/bloc/counter/counter_cubit.dart';
-import 'package:basis_app/bloc_observer.dart';
+
 import 'package:basis_app/core/color_const.dart';
 import 'package:basis_app/core/services/services_locator.dart';
+import 'package:basis_app/presentation/controller/product_bloc.dart';
 
 import 'package:basis_app/presentation/pages/MyCartPage.dart';
 import 'package:basis_app/presentation/pages/detiels_prodeuct_page.dart';
@@ -15,7 +16,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async{
   ServicesLocator().init();
-  Bloc.observer = MyBlocObserver();
+  // Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 
@@ -30,10 +31,10 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => CounterCubit(),
         ),
-        // BlocProvider(
-        //   create: (context) => ProductBloc(sl())..add(GetElectronicsProductsEvent()),
-        //   lazy: false,
-        // ),
+        BlocProvider(
+          create: (context) => ProductBloc(sl(),sl(),sl())..add(GetElectronicsProductsEvent())..add(GetJeweleryProductsEvent())..add(GetMenClothingEvent()),
+          lazy: false,
+        ),
       ],
       child: MaterialApp(
         theme: ThemeData(

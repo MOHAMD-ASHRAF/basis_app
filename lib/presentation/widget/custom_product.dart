@@ -8,11 +8,12 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CustomProduct extends StatelessWidget {
-  CustomProduct({Key? key, required this.image, this.onTap, required this.title, required this.description, required this.price}) : super(key: key);
+  CustomProduct({Key? key, required this.image, this.onTap, required this.title, required this.description, required this.price, required this.rating}) : super(key: key);
   final String image;
   final String title;
   final String description;
   final double price;
+  final double rating;
   void Function()? onTap;
 
   @override
@@ -43,7 +44,7 @@ class CustomProduct extends StatelessWidget {
                   const SizedBox(
                     height: 5,
                   ),
-                  const Rating(),
+                   Rating(rating: rating,),
                   const SizedBox(
                     height: 10,
                   ),

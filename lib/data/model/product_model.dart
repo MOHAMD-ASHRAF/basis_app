@@ -1,3 +1,4 @@
+import 'package:basis_app/data/model/rating_model.dart';
 import 'package:basis_app/domain/entities/product.dart';
 
 class ProductModel extends Product {
@@ -6,12 +7,18 @@ class ProductModel extends Product {
       required super.title,
       required super.price,
       required super.description,
-      required super.image});
+      required super.image,
+      //  required super.rating
+      });
 
   factory ProductModel.fromJson(Map<String, dynamic> json) => ProductModel(
       id: json['id'],
       title: json['title'],
       price: json['price'].toDouble(),
       description: json['description'],
-      image: json['image']);
+      image: json['image'],
+     // rating: List.from(json['rating'].map((x)=> RatingModel.fromJson(x))),
+  );
+
 }
+

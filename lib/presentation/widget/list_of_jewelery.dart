@@ -12,7 +12,9 @@ class ListOfJewelery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ProductBloc, ProductState>(
+      buildWhen: (previous, current) => previous.jeweleryProductsState != current.jeweleryProductsState,
       builder: (context, state) {
+        print('build jewelery');
         switch(state.jeweleryProductsState) {
           case RequestState.loading:
             return const Center(child: CircularProgressIndicator());
@@ -26,7 +28,8 @@ class ListOfJewelery extends StatelessWidget {
                     },
                     title: state.jeweleryProducts[index].title,
                     description: state.jeweleryProducts[index].description,
-                    price: state.jeweleryProducts[index].price);
+                    price: state.jeweleryProducts[index].price, rating: 2,);
+
               },
               scrollDirection: Axis.vertical,
               itemCount: state.jeweleryProducts.length,

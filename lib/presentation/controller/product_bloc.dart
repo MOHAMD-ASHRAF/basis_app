@@ -33,7 +33,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
 
   FutureOr<void> _getElctronicProducts(
       GetElectronicsProductsEvent event, Emitter<ProductState> emit) async {
-    final result = await getElectronicsProductsUseCase.execute('electronics');
+    final result = await getElectronicsProductsUseCase('electronics');
     result.fold(
         (l) => emit(state.copyWith(
             electronicsProductsState: RequestState.error,
@@ -45,7 +45,8 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
 
   FutureOr<void> _getJeweleryProducts(
       GetJeweleryProductsEvent event, Emitter<ProductState> emit) async {
-    final result = await jeweleryProductsUseCase.execute('jewelery');
+    final result = await jeweleryProductsUseCase('jewelery');
+    print(result);
     result.fold(
         (l) => emit(state.copyWith(
             jeweleryProductsState: RequestState.error,
@@ -56,7 +57,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
 
   FutureOr<void> _getMenClothingProducts(
       GetMenClothingEvent event, Emitter<ProductState> emit) async {
-    final result = await getMenClothingUseCase.execute('men\'s clothing');
+    final result = await getMenClothingUseCase('women\'s clothing');
     result.fold(
         (l) => emit(state.copyWith(
             menClothingProductsState: RequestState.error,

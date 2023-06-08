@@ -53,7 +53,7 @@ class CustomDetailsData extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const Rating(),
+          const Rating(rating: 5,),
           const SizedBox(
             height: 16,
           ),
