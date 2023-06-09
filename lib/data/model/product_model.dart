@@ -1,4 +1,4 @@
-import 'package:basis_app/data/model/rating_model.dart';
+
 import 'package:basis_app/domain/entities/product.dart';
 
 class ProductModel extends Product {

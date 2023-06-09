@@ -1,4 +1,4 @@
-import 'package:basis_app/domain/entities/rating.dart';
+
 import 'package:equatable/equatable.dart';
 
 class Product extends Equatable {
